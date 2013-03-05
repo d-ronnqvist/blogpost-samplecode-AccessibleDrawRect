@@ -19,6 +19,7 @@
 		6FBC92DA16E5CBEF00A3E9B5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC92D816E5CBEF00A3E9B5 /* MainStoryboard_iPhone.storyboard */; };
 		6FBC92DD16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC92DB16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard */; };
 		6FBC92E016E5CBEF00A3E9B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC92DF16E5CBEF00A3E9B5 /* ViewController.m */; };
+		6FBC92E816E5CC0D00A3E9B5 /* DRLogoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC92E716E5CC0D00A3E9B5 /* DRLogoView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		6FBC92DC16E5CBEF00A3E9B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		6FBC92DE16E5CBEF00A3E9B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6FBC92DF16E5CBEF00A3E9B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6FBC92E616E5CC0D00A3E9B5 /* DRLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRLogoView.h; sourceTree = "<group>"; };
+		6FBC92E716E5CC0D00A3E9B5 /* DRLogoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRLogoView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				6FBC92DB16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard */,
 				6FBC92DE16E5CBEF00A3E9B5 /* ViewController.h */,
 				6FBC92DF16E5CBEF00A3E9B5 /* ViewController.m */,
+				6FBC92E616E5CC0D00A3E9B5 /* DRLogoView.h */,
+				6FBC92E716E5CC0D00A3E9B5 /* DRLogoView.m */,
 				6FBC92C716E5CBEE00A3E9B5 /* Supporting Files */,
 			);
 			path = AccessibleDrawRect;
@@ -180,6 +185,7 @@
 				6FBC92CD16E5CBEE00A3E9B5 /* main.m in Sources */,
 				6FBC92D116E5CBEE00A3E9B5 /* AppDelegate.m in Sources */,
 				6FBC92E016E5CBEF00A3E9B5 /* ViewController.m in Sources */,
+				6FBC92E816E5CC0D00A3E9B5 /* DRLogoView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
