@@ -1,0 +1,319 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6FBC92C116E5CBEE00A3E9B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBC92C016E5CBEE00A3E9B5 /* UIKit.framework */; };
+		6FBC92C316E5CBEE00A3E9B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBC92C216E5CBEE00A3E9B5 /* Foundation.framework */; };
+		6FBC92C516E5CBEE00A3E9B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBC92C416E5CBEE00A3E9B5 /* CoreGraphics.framework */; };
+		6FBC92CB16E5CBEE00A3E9B5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC92C916E5CBEE00A3E9B5 /* InfoPlist.strings */; };
+		6FBC92CD16E5CBEE00A3E9B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC92CC16E5CBEE00A3E9B5 /* main.m */; };
+		6FBC92D116E5CBEE00A3E9B5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC92D016E5CBEE00A3E9B5 /* AppDelegate.m */; };
+		6FBC92D316E5CBEE00A3E9B5 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC92D216E5CBEE00A3E9B5 /* Default.png */; };
+		6FBC92D516E5CBEF00A3E9B5 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC92D416E5CBEE00A3E9B5 /* Default@2x.png */; };
+		6FBC92D716E5CBEF00A3E9B5 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC92D616E5CBEF00A3E9B5 /* Default-568h@2x.png */; };
+		6FBC92DA16E5CBEF00A3E9B5 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC92D816E5CBEF00A3E9B5 /* MainStoryboard_iPhone.storyboard */; };
+		6FBC92DD16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC92DB16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard */; };
+		6FBC92E016E5CBEF00A3E9B5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC92DF16E5CBEF00A3E9B5 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6FBC92BD16E5CBEE00A3E9B5 /* AccessibleDrawRect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessibleDrawRect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FBC92C016E5CBEE00A3E9B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6FBC92C216E5CBEE00A3E9B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6FBC92C416E5CBEE00A3E9B5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6FBC92C816E5CBEE00A3E9B5 /* AccessibleDrawRect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AccessibleDrawRect-Info.plist"; sourceTree = "<group>"; };
+		6FBC92CA16E5CBEE00A3E9B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6FBC92CC16E5CBEE00A3E9B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6FBC92CE16E5CBEE00A3E9B5 /* AccessibleDrawRect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AccessibleDrawRect-Prefix.pch"; sourceTree = "<group>"; };
+		6FBC92CF16E5CBEE00A3E9B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6FBC92D016E5CBEE00A3E9B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6FBC92D216E5CBEE00A3E9B5 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6FBC92D416E5CBEE00A3E9B5 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6FBC92D616E5CBEF00A3E9B5 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6FBC92D916E5CBEF00A3E9B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		6FBC92DC16E5CBEF00A3E9B5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		6FBC92DE16E5CBEF00A3E9B5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6FBC92DF16E5CBEF00A3E9B5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6FBC92BA16E5CBEE00A3E9B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FBC92C116E5CBEE00A3E9B5 /* UIKit.framework in Frameworks */,
+				6FBC92C316E5CBEE00A3E9B5 /* Foundation.framework in Frameworks */,
+				6FBC92C516E5CBEE00A3E9B5 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6FBC92B416E5CBEE00A3E9B5 = {
+			isa = PBXGroup;
+			children = (
+				6FBC92C616E5CBEE00A3E9B5 /* AccessibleDrawRect */,
+				6FBC92BF16E5CBEE00A3E9B5 /* Frameworks */,
+				6FBC92BE16E5CBEE00A3E9B5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6FBC92BE16E5CBEE00A3E9B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC92BD16E5CBEE00A3E9B5 /* AccessibleDrawRect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6FBC92BF16E5CBEE00A3E9B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC92C016E5CBEE00A3E9B5 /* UIKit.framework */,
+				6FBC92C216E5CBEE00A3E9B5 /* Foundation.framework */,
+				6FBC92C416E5CBEE00A3E9B5 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6FBC92C616E5CBEE00A3E9B5 /* AccessibleDrawRect */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC92CF16E5CBEE00A3E9B5 /* AppDelegate.h */,
+				6FBC92D016E5CBEE00A3E9B5 /* AppDelegate.m */,
+				6FBC92D816E5CBEF00A3E9B5 /* MainStoryboard_iPhone.storyboard */,
+				6FBC92DB16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard */,
+				6FBC92DE16E5CBEF00A3E9B5 /* ViewController.h */,
+				6FBC92DF16E5CBEF00A3E9B5 /* ViewController.m */,
+				6FBC92C716E5CBEE00A3E9B5 /* Supporting Files */,
+			);
+			path = AccessibleDrawRect;
+			sourceTree = "<group>";
+		};
+		6FBC92C716E5CBEE00A3E9B5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6FBC92C816E5CBEE00A3E9B5 /* AccessibleDrawRect-Info.plist */,
+				6FBC92C916E5CBEE00A3E9B5 /* InfoPlist.strings */,
+				6FBC92CC16E5CBEE00A3E9B5 /* main.m */,
+				6FBC92CE16E5CBEE00A3E9B5 /* AccessibleDrawRect-Prefix.pch */,
+				6FBC92D216E5CBEE00A3E9B5 /* Default.png */,
+				6FBC92D416E5CBEE00A3E9B5 /* Default@2x.png */,
+				6FBC92D616E5CBEF00A3E9B5 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6FBC92BC16E5CBEE00A3E9B5 /* AccessibleDrawRect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6FBC92E316E5CBEF00A3E9B5 /* Build configuration list for PBXNativeTarget "AccessibleDrawRect" */;
+			buildPhases = (
+				6FBC92B916E5CBEE00A3E9B5 /* Sources */,
+				6FBC92BA16E5CBEE00A3E9B5 /* Frameworks */,
+				6FBC92BB16E5CBEE00A3E9B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AccessibleDrawRect;
+			productName = AccessibleDrawRect;
+			productReference = 6FBC92BD16E5CBEE00A3E9B5 /* AccessibleDrawRect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6FBC92B516E5CBEE00A3E9B5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "David Rönnqvist";
+			};
+			buildConfigurationList = 6FBC92B816E5CBEE00A3E9B5 /* Build configuration list for PBXProject "AccessibleDrawRect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6FBC92B416E5CBEE00A3E9B5;
+			productRefGroup = 6FBC92BE16E5CBEE00A3E9B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6FBC92BC16E5CBEE00A3E9B5 /* AccessibleDrawRect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6FBC92BB16E5CBEE00A3E9B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FBC92CB16E5CBEE00A3E9B5 /* InfoPlist.strings in Resources */,
+				6FBC92D316E5CBEE00A3E9B5 /* Default.png in Resources */,
+				6FBC92D516E5CBEF00A3E9B5 /* Default@2x.png in Resources */,
+				6FBC92D716E5CBEF00A3E9B5 /* Default-568h@2x.png in Resources */,
+				6FBC92DA16E5CBEF00A3E9B5 /* MainStoryboard_iPhone.storyboard in Resources */,
+				6FBC92DD16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6FBC92B916E5CBEE00A3E9B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FBC92CD16E5CBEE00A3E9B5 /* main.m in Sources */,
+				6FBC92D116E5CBEE00A3E9B5 /* AppDelegate.m in Sources */,
+				6FBC92E016E5CBEF00A3E9B5 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6FBC92C916E5CBEE00A3E9B5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FBC92CA16E5CBEE00A3E9B5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6FBC92D816E5CBEF00A3E9B5 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FBC92D916E5CBEF00A3E9B5 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		6FBC92DB16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6FBC92DC16E5CBEF00A3E9B5 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6FBC92E116E5CBEF00A3E9B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6FBC92E216E5CBEF00A3E9B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6FBC92E416E5CBEF00A3E9B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AccessibleDrawRect/AccessibleDrawRect-Prefix.pch";
+				INFOPLIST_FILE = "AccessibleDrawRect/AccessibleDrawRect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6FBC92E516E5CBEF00A3E9B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AccessibleDrawRect/AccessibleDrawRect-Prefix.pch";
+				INFOPLIST_FILE = "AccessibleDrawRect/AccessibleDrawRect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6FBC92B816E5CBEE00A3E9B5 /* Build configuration list for PBXProject "AccessibleDrawRect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FBC92E116E5CBEF00A3E9B5 /* Debug */,
+				6FBC92E216E5CBEF00A3E9B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6FBC92E316E5CBEF00A3E9B5 /* Build configuration list for PBXNativeTarget "AccessibleDrawRect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FBC92E416E5CBEF00A3E9B5 /* Debug */,
+				6FBC92E516E5CBEF00A3E9B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6FBC92B516E5CBEE00A3E9B5 /* Project object */;
+}
