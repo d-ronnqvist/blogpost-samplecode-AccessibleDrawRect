@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6FA28BD416E69263008C6817 /* accessiblity-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FA28BD216E69263008C6817 /* accessiblity-logo.png */; };
+		6FA28BD516E69263008C6817 /* accessiblity-logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FA28BD316E69263008C6817 /* accessiblity-logo@2x.png */; };
 		6FBC92C116E5CBEE00A3E9B5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBC92C016E5CBEE00A3E9B5 /* UIKit.framework */; };
 		6FBC92C316E5CBEE00A3E9B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBC92C216E5CBEE00A3E9B5 /* Foundation.framework */; };
 		6FBC92C516E5CBEE00A3E9B5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FBC92C416E5CBEE00A3E9B5 /* CoreGraphics.framework */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6FA28BD216E69263008C6817 /* accessiblity-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accessiblity-logo.png"; sourceTree = "<group>"; };
+		6FA28BD316E69263008C6817 /* accessiblity-logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "accessiblity-logo@2x.png"; sourceTree = "<group>"; };
 		6FBC92BD16E5CBEE00A3E9B5 /* AccessibleDrawRect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessibleDrawRect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FBC92C016E5CBEE00A3E9B5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		6FBC92C216E5CBEE00A3E9B5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +100,8 @@
 				6FBC92DF16E5CBEF00A3E9B5 /* ViewController.m */,
 				6FBC92E616E5CC0D00A3E9B5 /* DRLogoView.h */,
 				6FBC92E716E5CC0D00A3E9B5 /* DRLogoView.m */,
+				6FA28BD216E69263008C6817 /* accessiblity-logo.png */,
+				6FA28BD316E69263008C6817 /* accessiblity-logo@2x.png */,
 				6FBC92C716E5CBEE00A3E9B5 /* Supporting Files */,
 			);
 			path = AccessibleDrawRect;
@@ -172,6 +178,8 @@
 				6FBC92D716E5CBEF00A3E9B5 /* Default-568h@2x.png in Resources */,
 				6FBC92DA16E5CBEF00A3E9B5 /* MainStoryboard_iPhone.storyboard in Resources */,
 				6FBC92DD16E5CBEF00A3E9B5 /* MainStoryboard_iPad.storyboard in Resources */,
+				6FA28BD416E69263008C6817 /* accessiblity-logo.png in Resources */,
+				6FA28BD516E69263008C6817 /* accessiblity-logo@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
