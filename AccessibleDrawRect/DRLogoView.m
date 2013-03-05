@@ -9,7 +9,7 @@
 #import "DRLogoView.h"
 
 @interface DRLogoView  ()
-@property (copy) NSArray *elementsInLogo;
+@property (copy) NSArray *accessibleElements;
 
 @property (strong) UIColor *brightColor;
 @property (strong) UIColor *blueColor;
@@ -43,15 +43,15 @@
 }
 
 - (NSInteger)accessibilityElementCount {
-    return 2;
+    return [self.accessibleElements count]; // Two vector shapes, 1 string & 1 image
 }
 
 - (id)accessibilityElementAtIndex:(NSInteger)index {
-    return self.elementsInLogo[index];
+    return self.accessibleElements[index];
 }
 
 - (NSInteger)indexOfAccessibilityElement:(id)element {
-    return [self.elementsInLogo indexOfObject:element];
+    return [self.accessibleElements indexOfObject:element];
 }
 
 #pragma mark - Drawing
@@ -60,6 +60,56 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+
+//     ___          _                             _
+//    | _ ) __ _ __| |____ _ _ _ ___ _  _ _ _  __| |
+//    | _ \/ _` / _| / / _` | '_/ _ \ || | ' \/ _` |
+//    |___/\__,_\__|_\_\__, |_| \___/\_,_|_||_\__,_|
+//                     |___/
+    
+    // Drawing the background
+    CGContextSetFillColorWithColor(context,
+                                   self.brightColor.CGColor);
+    CGContextAddRect(context, rect);
+    CGContextFillPath(context);
+    
+    
+    
+//     _____        _
+//    |_   _|____ _| |_
+//      | |/ -_) V /  _|
+//      |_|\___/_\_\\__|
+    
+    // Drawing the text
+    NSAttributedString *attributedString = [self attributedStringToDraw];
+    CGSize textSize = [attributedString size];
+    CGPoint textPoint = CGPointMake(CGRectGetMidX(rect)-textSize.width/2.0,
+                                    CGRectGetMidY(rect)-textSize.height/2.0);
+    [attributedString drawAtPoint:textPoint];
+    
+    // Accessiblity element for text
+    UIAccessibilityElement *textElement =
+        [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self];
+    textElement.accessibilityLabel = attributedString.string;
+    CGRect textFrame = CGRectMake(textPoint.x,
+                                  textPoint.y,
+                                  textSize.width,
+                                  textSize.height);
+    textElement.accessibilityFrame = [self convertRect:textFrame
+                                                toView:nil];
+    
+    
+    
+    
+//    __   __      _
+//    \ \ / /__ __| |_ ___ _ _
+//     \ V / -_) _|  _/ _ \ '_|
+//      \_/\___\__|\__\___/_|
+//    
+    
+    // Drawing the logo (two vector shapes)
     // Create paths
     CGPathRef dPath = [self newPathForDShape];
     CGPathRef rPath = [self newPathForRShape];
@@ -72,10 +122,19 @@
     CGSize logoSize = CGPathGetBoundingBox(bothPaths).size;
     CGPathRelease(bothPaths);
     CGSize logoOffset = CGSizeMake(CGRectGetMidX(rect)-logoSize.width/2.0,
-                                   CGRectGetMidY(rect)-logoSize.height/2.0);
+                                   CGRectGetMidY(rect)-logoSize.height-50);
     
+    CGContextSetFillColorWithColor(context, 
+                                   self.blueColor.CGColor);
+    CGContextSaveGState(context);
+    CGContextTranslateCTM(context, logoOffset.width, logoOffset.height);
     
-    // Setup accessiblity elements
+    CGContextAddPath(context, dPath);
+    CGContextAddPath(context, rPath);
+    CGContextFillPath(context);
+    CGContextRestoreGState(context);
+    
+    // Two accessiblity elements for the vector shapes
     UIAccessibilityElement *dElement = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self];
     dElement.accessibilityLabel = @"D";
     dElement.accessibilityHint = @"The letter D in the DR logo.";
@@ -88,28 +147,53 @@
     rElement.accessibilityFrame = [self convertRect:CGRectOffset(CGPathGetBoundingBox(rPath),logoOffset.width, logoOffset.height)
                                              toView:nil];
     
-    self.elementsInLogo = @[dElement, rElement];
-    
-    // Drawing code
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context,
-                                   self.brightColor.CGColor);
-    CGContextAddRect(context, rect);
-    CGContextFillPath(context);
     
     
-    CGContextSetFillColorWithColor(context, 
-                                   self.blueColor.CGColor);
-    CGContextTranslateCTM(context, logoOffset.width, logoOffset.height);
     
-    CGContextAddPath(context, dPath);
-    CGContextAddPath(context, rPath);
-    CGContextFillPath(context);
+//     ___
+//    |_ _|_ __  __ _ __ _ ___
+//     | || '  \/ _` / _` / -_)
+//    |___|_|_|_\__,_\__, \___|
+//                   |___/
+  
+    // Draw the image
+    UIImage *image = [UIImage imageNamed:@"accessiblity-logo"];
+    CGRect imageRect = CGRectMake(CGRectGetMidX(rect)-image.size.width/2,
+                                  CGRectGetMidY(rect)+40,
+                                  image.size.width, image.size.height);
+    [image drawInRect:imageRect];
+    
+    // Accessiblity element for the image
+    UIAccessibilityElement *imageElement =
+        [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self];
+    imageElement.accessibilityLabel = @"Accessiblity logo";
+    imageElement.accessibilityFrame = [self convertRect:imageRect
+                                                 toView:nil];
+    
+    self.elementsInLogo = @[textElement, dElement, rElement, imageElement];
     
     // Release paths
     CGPathRelease(dPath);
     CGPathRelease(rPath);
+}
+
+#pragma mark - Attributed text
+
+- (NSAttributedString *)attributedStringToDraw {
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@"drawRect: can be accessible"];
+    
+    CGFloat fontSize = 20.0;
+    
+    [text setAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Courier" size:fontSize]}
+                  range:[text.string rangeOfString:@"drawRect:"]];
+    
+    [text setAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-DemiBoldItalic" size:fontSize]}
+                  range:[text.string rangeOfString:@"can"]];
+    
+    [text setAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"AvenirNext-Regular" size:fontSize]}
+                  range:[text.string rangeOfString:@"be accessible"]];
+    
+    return text;
 }
 
 #pragma mark - Shapes
