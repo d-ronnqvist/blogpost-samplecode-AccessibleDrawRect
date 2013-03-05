@@ -170,7 +170,7 @@
     imageElement.accessibilityFrame = [self convertRect:imageRect
                                                  toView:nil];
     
-    self.elementsInLogo = @[textElement, dElement, rElement, imageElement];
+    self.accessibleElements = @[textElement, dElement, rElement, imageElement];
     
     // Release paths
     CGPathRelease(dPath);
