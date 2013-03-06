@@ -51,7 +51,7 @@
     return self;
 }
 
-#pragma mark - Accessiblity Container protocol
+#pragma mark - Accessibility Container protocol
 
 - (BOOL)isAccessibilityElement {
     return NO;
@@ -104,7 +104,7 @@
                                     CGRectGetMidY(rect)-textSize.height/2.0);
     [attributedString drawAtPoint:textPoint];
     
-    // Accessiblity element for text
+    // Accessibility element for text
     UIAccessibilityElement *textElement =
         [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self];
     textElement.accessibilityLabel = attributedString.string;
@@ -149,7 +149,7 @@
     CGContextFillPath(context);
     CGContextRestoreGState(context);
     
-    // Two accessiblity elements for the vector shapes
+    // Two Accessibility elements for the vector shapes
     UIAccessibilityElement *dElement = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self];
     dElement.accessibilityLabel = @"D";
     dElement.accessibilityHint = @"The letter D in the DR logo.";
@@ -172,16 +172,16 @@
 //                   |___/
   
     // Draw the image
-    UIImage *image = [UIImage imageNamed:@"accessiblity-logo"];
+    UIImage *image = [UIImage imageNamed:@"accessibility-logo"];
     CGRect imageRect = CGRectMake(CGRectGetMidX(rect)-image.size.width/2,
                                   CGRectGetMidY(rect)+40,
                                   image.size.width, image.size.height);
     [image drawInRect:imageRect];
     
-    // Accessiblity element for the image
+    // Accessibility element for the image
     UIAccessibilityElement *imageElement =
         [[UIAccessibilityElement alloc] initWithAccessibilityContainer:self];
-    imageElement.accessibilityLabel = @"Accessiblity logo";
+    imageElement.accessibilityLabel = @"Accessibility logo";
     imageElement.accessibilityFrame = [self convertRect:imageRect
                                                  toView:nil];
     
